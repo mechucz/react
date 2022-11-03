@@ -1,5 +1,13 @@
 import Video from "../components/Video"
+import { useEffect } from "react"
 const Videos=()=>{
+        //Component didMount
+        useEffect(()=>{
+                //consulta a la API=> ARRAY CON LOS DATOS DE LOS VIDEOS
+                //Este HOOK tiene 2 argumentos, una funcion y un array
+                console.log("Iupi, el componente se ha montado en el DOM")
+
+        }, [])
     return(
         <>
 <Video  
