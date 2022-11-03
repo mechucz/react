@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 const Video = (props) => {
@@ -11,7 +12,17 @@ const rateVideo=()=>{ //funcion para agregar estrellas a cada video
     setRate(rate +1)
     console.log(rate)
     }
+
+    
 }
+
+ //Component didUpdate
+ useEffect(()=>{
+    //consulta a la API=> ARRAY CON LOS DATOS DE LOS VIDEOS
+    //Este HOOK tiene 2 argumentos, una funcion y un array
+    console.log("Ups, el componente se ha actualizado")
+
+}, [rate]) //=> rate es una dependencia de este HOOK
     return (
     <div className="video-container">
         <div className="video-image">
