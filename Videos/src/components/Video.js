@@ -28,6 +28,7 @@ const rateVideo=()=>{ //funcion para agregar estrellas a cada video
         <div className="video-image">
             <img src={props.thumbnails} alt="Same alt value" /></div>
             <div className="video-info">
+                <button onClick={props.deleteVideo}>Delete this video</button>
                 <h3>{props.title}</h3>
                 <span>This video has {rate} star </span><button onClick={rateVideo}>Rate this video</button>
             <p>Upload date: {props.date}</p>
